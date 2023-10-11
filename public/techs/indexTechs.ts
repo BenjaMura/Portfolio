@@ -5,7 +5,7 @@ import CSSImg from "@/public/techs/Css.png";
 import ReactImg from "@/public/techs/React.png";
 import ReduxImg from "@/public/techs/Redux.png";
 import ViteImg from "@/public/techs/Vite.png";
-import NextjsImg from "@/public/techs/Nestjs.png";
+import NextjsImg from "@/public/techs/Nextjs.png";
 import NodejsImg from "@/public/techs/Nodejs.png";
 import NestjsImg from "@/public/techs/Nestjs.png";
 import ExpressjsImg from "@/public/techs/Expressjs.png";
