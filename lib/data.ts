@@ -3,6 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
 import rickandmortyImg from "@/public/RickandMorty.png";
 import countriesImg from "@/public/Countries.png";
+import { techsImgs } from "@/public/techs/indexTechs";
 
 export const links = [
   {
@@ -78,24 +79,119 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "JavaScript",
-  "TypeScript",
-  "HTML",
-  "CSS",
-  "React",
-  "Redux",
-  "Next.js",
-  "Vite",
-  "Node.js",
-  "Nest.js",
-  "Express",
-  "PostgreSQL",
-  "MySQL",
-  "Jest",
-  "Tailwind",
-  "Framer Motion",
-  "Git",
-  "Postman",
-  "Render",
-  "Vercel",
+  {
+    name: "JavaScript",
+    image: techsImgs[0],
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    name: "TypeScript",
+    image: techsImgs[1],
+    url: "https://www.typescriptlang.org",
+  },
+  {
+    name: "HTML",
+    image: techsImgs[2],
+    url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    name: "CSS",
+    image: techsImgs[3],
+    url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    name: "React",
+    image: techsImgs[4],
+    url: "https://react.dev",
+  },
+  {
+    name: "Redux",
+    image: techsImgs[5],
+    url: "https://redux.js.org",
+  },
+  {
+    name: "Vite",
+    image: techsImgs[6],
+    url: "https://vitejs.dev",
+  },
+  {
+    name: "Nextjs",
+    image: techsImgs[7],
+    url: "https://nextjs.org",
+  },
+  {
+    name: "Nodejs",
+    image: techsImgs[8],
+    url: "https://nodejs.org",
+  },
+  {
+    name: "Nestjs",
+    image: techsImgs[9],
+    url: "https://nestjs.com",
+  },
+  {
+    name: "Expressjs",
+    image: techsImgs[10],
+    url: "https://expressjs.com",
+  },
+  {
+    name: "PostgreSQL",
+    image: techsImgs[11],
+    url: "https://www.postgresql.org",
+  },
+  {
+    name: "MySQL",
+    image: techsImgs[12],
+    url: "https://www.mysql.com",
+  },
+  {
+    name: "Jest",
+    image: techsImgs[13],
+    url: "https://jestjs.io",
+  },
+  {
+    name: "Tailwind",
+    image: techsImgs[14],
+    url: "https://tailwindcss.com",
+  },
+  {
+    name: "Postman",
+    image: techsImgs[15],
+    url: "https://www.postman.com",
+  },
+  {
+    name: "Npm",
+    image: techsImgs[16],
+    url: "https://www.npmjs.com",
+  },
+  {
+    name: "Git",
+    image: techsImgs[17],
+    url: "https://git-scm.com",
+  },
+  {
+    name: "Vercel",
+    image: techsImgs[18],
+    url: "https://vercel.com",
+  },
+  {
+    name: "Render",
+    image: techsImgs[19],
+    url: "https://render.com",
+  },
+  {
+    name: "Figma",
+    image: techsImgs[20],
+    url: "https://www.figma.com",
+  },
+  {
+    name: "FramerMotion",
+    image: techsImgs[21],
+    url: "https://www.framer.com",
+  },
+  {
+    name: "VisualStudioCode",
+    image: techsImgs[22],
+    url: "https://code.visualstudio.com",
+  },
 ] as const;

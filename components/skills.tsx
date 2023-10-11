@@ -5,6 +5,7 @@ import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -32,19 +33,26 @@ export default function Skills() {
       <SectionHeading>My skills</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-amber-800">
         {skillsData.map((skill, index) => (
-          <motion.li
-            className="bg-amber-200 borderBlack rounded-xl px-5 py-3 dark:bg-amber-800 dark:text-amber-50"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            {skill}
-          </motion.li>
+          <a href={skill.url} key={index} target="_blank" className="hover:scale-105 active:scale-90">
+            <motion.li
+              className="bg-amber-100 hover:bg-amber-200 borderBlack rounded-xl px-4 py-3 dark:bg-zinc-400 dark:hover:bg-zinc-300"
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={index}
+            >
+              <Image
+                src={skill.image}
+                alt={skill.name}
+                title={skill.name}
+                width={50}
+                height={50}
+              />
+            </motion.li>
+          </a>
         ))}
       </ul>
     </section>
