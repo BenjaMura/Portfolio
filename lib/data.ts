@@ -65,6 +65,7 @@ export const projectsData = [
       "This project consisted of building a web application from the API (https://rickandmortyapi.com/) in which you can search for characters, view character information, add them to favorites, filter and sort them.",
     tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Express", "PostgreSQL"],
     imageUrl: rickandmortyImg,
+    url: "https://raw.githubusercontent.com/BenjaMura/Rick_and_Morty/main/Client/src/img/RickAndMortyDemo.mp4",
   },
   {
     title: "Countries",
@@ -72,6 +73,7 @@ export const projectsData = [
       "Single Page Application using the technologies seen in the bootcamp, put into practice basic style and design resources, affirm and connect the concepts learned, learn best practices, learn and practice the GIT workflow, use and practice testing.",
     tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Vite",  "Express", "PostgreSQL", "Jest"],
     imageUrl: countriesImg,
+    url: "https://vimeo.com/871597606",
   },
 ] as const;
 
