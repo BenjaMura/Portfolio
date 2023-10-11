@@ -11,38 +11,41 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-10 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
-      </p>
-
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
+        👨‍💻 I'm driven by the idea of using my coding skills to create meaningful
+        and impactful solutions. Whether it's developing software that improves
+        efficiency, solving real-world problems, or contributing to projects
+        that make a difference.
+      </p>
+      <p>
+        🤝 Being part of a big community where we can learn from others and have
+        a positive impact is something I value and enjoy beyond measure. I
+        believe in the important power of collaboration and the mutual exchange
+        of knowledge.
+      </p>
+      <p>
+        💡 Solving complex problems and puzzles gives me a great satisfaction.
+        My logical and analytical thinking allows me to face challenges in a
+        more structured way to find creative solutions. At the same time, I
+        consider it very important to think outside the box to find unique and
+        efficient solutions to problems.
+      </p>
+      <p>
+        🚀 The ever-evolving nature of technology fuels my motivation to
+        constantly learn and stay on top of the latest trends and advancements.
+        I wholeheartedly support the concept of lifelong learning and
+        enthusiastically embrace new technologies and frameworks.
+      </p>
+      <p>
+        🏃 In my free time I exercise regularly. I find it not only entertaining
+        but also a great way to relax after a long day of programming.
       </p>
     </motion.section>
   );
