@@ -14,3 +14,12 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+body #contenedorPrincipal {
+  overflow-x: hidden;
+}
+@media (max-width: 640px) {
+  body, #contenedorPrincipal {
+    overflow-x: hidden;
+  }
+}
