@@ -7,6 +7,7 @@ import Link from "next/link";
 import { BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
@@ -47,8 +48,8 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Benjamin.</span> I'm a full-stack web developer. I enjoy
-        building sites.
+        <span className="font-bold">Hello, I'm Benjamin.</span> I'm a full-stack
+        web developer. I enjoy building sites.
       </motion.h1>
 
       <motion.div
@@ -72,7 +73,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
-          href="/Muratore-Benjamín.pdf"
+          href="/CV-Muratore-Benjamín.pdf"
           download
         >
           Download CV{" "}
@@ -93,6 +94,13 @@ export default function Intro() {
           target="_blank"
         >
           <FaGithubSquare />
+        </a>
+        <a
+          className="bg-white p-4 text-zinc-700 hover:text-amber-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:bg-amber-50 hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
+          href="https://wa.me/5493815182901"
+          target="_blank"
+        >
+          <FaWhatsappSquare />
         </a>
       </motion.div>
     </section>

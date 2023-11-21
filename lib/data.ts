@@ -3,6 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { LuGraduationCap } from "react-icons/lu";
 import rickandmortyImg from "@/public/RickandMorty.png";
 import countriesImg from "@/public/Countries.png";
+import blackgroupdesignImg from "@/public/BlackGroupDesign.png"
 import { techsImgs } from "@/public/techs/indexTechs";
 
 export const links = [
@@ -76,6 +77,14 @@ export const projectsData = [
     imageUrl: countriesImg,
     url: "https://vimeo.com/871597606",
   },
+  {
+    title: "Black Group Design",
+    description:
+      "Single page application using technologies: Javascript, HTML, CSS, React, Redux, Vite, Node, Express and Sequelize.      Implementing styling and design resources (UX:UI), local and cloud storage, email notifications, payment gateway, password protection and recovery, third party authentication, data persistence, logical deletion, administrator panel.",
+    tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Vite",  "Express", "PostgreSQL", "JWT", "Bcrypt", "Bootstrap", "Styled-Components", "Chart.js", "Handsontable", "MercadoPago", "Multer-Storage-Cloudinary", "Nodemailer", "Passport-Google-Oauth20"],
+    imageUrl: blackgroupdesignImg,
+    url: "https://vimeo.com/886944581",
+  }
 ] as const;
 
 export const skillsData = [
