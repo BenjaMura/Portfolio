@@ -72,7 +72,7 @@ export const projectsData = [
   {
     title: "Countries",
     description:
-      "Single Page Application using the technologies seen in the bootcamp, put into practice basic style and design resources, affirm and connect the concepts learned, learn best practices, learn and practice the GIT workflow, use and practice testing.",
+      "Web application where I apply the technologies seen in the bootcamp, putting into practice basic style and design resources, affirming and connecting the concepts learned, testing best practices, using and practicing the GIT workflow and testing.",
     tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Vite",  "Express", "PostgreSQL", "Jest"],
     imageUrl: countriesImg,
     url: "https://vimeo.com/871597606",
@@ -80,7 +80,7 @@ export const projectsData = [
   {
     title: "Black Group Design",
     description:
-      "Single page application using technologies: Javascript, HTML, CSS, React, Redux, Vite, Node, Express and Sequelize.      Implementing styling and design resources (UX:UI), local and cloud storage, email notifications, payment gateway, password protection and recovery, third party authentication, data persistence, logical deletion, administrator panel.",
+      "Web application using technologies: Javascript, HTML, CSS, React, Redux, Vite, Node, Express and Sequelize. Implementing styling and design resources (UX:UI), local and cloud storage, email notifications, payment gateway, password protection and recovery, third party authentication, data persistence, logical deletion, administrator panel.",
     tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Vite",  "Express", "PostgreSQL", "JWT", "Bcrypt", "Bootstrap", "Styled-Components", "Chart.js", "Handsontable", "MercadoPago", "Multer-Storage-Cloudinary", "Nodemailer", "Passport-Google-Oauth20"],
     imageUrl: blackgroupdesignImg,
     url: "https://vimeo.com/886944581",
