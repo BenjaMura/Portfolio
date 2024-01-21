@@ -6,10 +6,37 @@ import countriesImg from "@/public/Countries.png";
 import blackgroupdesignImg from "@/public/BlackGroupDesign.png"
 import { techsImgs } from "@/public/techs/indexTechs";
 
-export const links = [
+export const links_es = [
   {
-    name: "Home",
-    hash: "#home",
+    name: "Inicio",
+    hash: "#inicio",
+  },
+  {
+    name: "Acerca",
+    hash: "#acerca",
+  },
+  {
+    name: "Proyectos",
+    hash: "#proyectos",
+  },
+  {
+    name: "Tecnologías",
+    hash: "#tecnologías",
+  },
+  /* {
+    name: "Experience",
+    hash: "#experience",
+  }, */
+  {
+    name: "Contacto",
+    hash: "#contacto",
+  },
+] as const;
+
+export const links_en = [
+  {
+    name: "Intro",
+    hash: "#intro",
   },
   {
     name: "About",
@@ -60,7 +87,34 @@ export const experiencesData = [
   },
 ] as const;
 
-export const projectsData = [
+export const projectsData_es = [
+  {
+    title: "Rick and Morty",
+    description:
+      "Este proyecto consistió en construir una aplicación web desde la API (https://rickandmortyapi.com/) en la cual se pueden buscar personajes, ver información de los personajes, agregarlos a favoritos, filtrarlos y ordenarlos.",
+    tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Express", "PostgreSQL"],
+    imageUrl: rickandmortyImg,
+    url: "https://raw.githubusercontent.com/BenjaMura/Rick_and_Morty/main/Client/src/img/RickAndMortyDemo.mp4",
+  },
+  {
+    title: "Countries",
+    description:
+      "Aplicación web donde aplico las tecnologías vistas en el bootcamp, poniendo en práctica recursos básicos de estilo y diseño, afirmando y conectando los conceptos aprendidos, probando mejores prácticas, usando y practicando el flujo de trabajo GIT y testeos.",
+    tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Vite",  "Express", "PostgreSQL", "Jest"],
+    imageUrl: countriesImg,
+    url: "https://vimeo.com/871597606",
+  },
+  {
+    title: "Black Group Design",
+    description:
+      "Aplicación web utilizando tecnologías: Javascript, HTML, CSS, React, Redux, Vite, Node, Express y Sequelize. Implementación de recursos de estilismo y diseño (UX:UI), almacenamiento local y en la nube, notificaciones por correo electrónico, pasarela de pago, protección y recuperación de contraseñas, autenticación de terceros, persistencia de datos, eliminación lógica, panel de administrador.",
+    tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Vite",  "Express", "PostgreSQL", "JWT", "Bcrypt", "Bootstrap", "Styled-Components", "Chart.js", "Handsontable", "MercadoPago", "Multer-Storage-Cloudinary", "Nodemailer", "Passport-Google-Oauth20"],
+    imageUrl: blackgroupdesignImg,
+    url: "https://vimeo.com/886944581",
+  }
+] as const;
+
+export const projectsData_en = [
   {
     title: "Rick and Morty",
     description:

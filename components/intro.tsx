@@ -2,23 +2,25 @@
 
 import Image from "next/image";
 import React from "react";
+import waveImage from '@/public/Wave.gif';
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
-import { FaWhatsappSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useTranslation } from "react-i18next";
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home", 0.5);
+  const { t } = useTranslation();
+  const { ref } = useSectionInView(t('header1'), 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
       ref={ref}
-      id="home"
+      id={t('header1.1')}
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="flex items-center justify-center">
@@ -48,8 +50,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Benjamin.</span> I'm a full-stack
-        web developer. I enjoy building sites.
+        <span className="flex items-center justify-center"><Image src={waveImage} alt="Wave" width={40} height={40} /></span><span className="font-bold">{t('intro1')}</span>{t('intro2')}
       </motion.h1>
 
       <motion.div
@@ -61,24 +62,31 @@ export default function Intro() {
         }}
       >
         <Link
-          href="#contact"
+          href={t('header5.2')}
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition borderBlack dark:bg-zinc-600 dark:text-amber-200"
           onClick={() => {
-            setActiveSection("Contact");
+            setActiveSection(t('header5'));
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here
+          {t('intro3')}
         </Link>
 
-        <a
+        {t('intro4') === "Descarga mi CV" ? <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
-          href="/CV-Muratore-Benjamin.pdf"
+          href="/CV-Muratore-Benjamín-LAT.pdf"
           download
         >
-          Download CV{" "}
+          {t('intro4')}{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a>
+        </a> : <a
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
+          href="/CV-Muratore-Benjamin-ENG.pdf"
+          download
+        >
+          {t('intro4')}{" "}
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+        </a> }
 
         <a
           className="bg-white p-4 text-zinc-700 hover:text-amber-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:bg-amber-50 hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
@@ -94,13 +102,6 @@ export default function Intro() {
           target="_blank"
         >
           <FaGithubSquare />
-        </a>
-        <a
-          className="bg-white p-4 text-zinc-700 hover:text-amber-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:bg-amber-50 hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
-          href="https://wa.me/5493815182901"
-          target="_blank"
-        >
-          <FaWhatsappSquare />
         </a>
       </motion.div>
     </section>
