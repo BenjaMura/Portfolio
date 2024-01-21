@@ -1,13 +1,12 @@
 "use client";
 
 import { useRef } from "react";
-import { projectsData_es, projectsData_en } from "@/lib/data";
+import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-const currentLanguage = "es";
-type ProjectProps = typeof currentLanguage extends "es" ? typeof projectsData_es[number] : typeof projectsData_en[number];
+type ProjectProps = (typeof projectsData)[number];
 
 export default function Project({
   title,
@@ -16,6 +15,7 @@ export default function Project({
   imageUrl,
   url
 }: ProjectProps) {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,7 +23,6 @@ export default function Project({
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const { t } = useTranslation();
 
   return (
     <motion.div
@@ -45,7 +44,7 @@ export default function Project({
         > {t('project1')}
         </a>
           <p className="mt-2 mb-2 leading-relaxed text-amber-700 dark:text-amber-100">
-            {description}
+          {t('project1') === "Ver demo" ? description.es : description.en}
           </p>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (

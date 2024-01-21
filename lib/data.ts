@@ -87,54 +87,33 @@ export const experiencesData = [
   },
 ] as const;
 
-export const projectsData_es = [
+export const projectsData = [
   {
     title: "Rick and Morty",
-    description:
-      "Este proyecto consistió en construir una aplicación web desde la API (https://rickandmortyapi.com/) en la cual se pueden buscar personajes, ver información de los personajes, agregarlos a favoritos, filtrarlos y ordenarlos.",
+    description: {
+      es: "Este proyecto consistió en construir una aplicación web desde la API (https://rickandmortyapi.com/) en la cual se pueden buscar personajes, ver información de los personajes, agregarlos a favoritos, filtrarlos y ordenarlos.",
+      en: "This project consisted of building a web application from the API (https://rickandmortyapi.com/) in which you can search for characters, view character information, add them to favorites, filter and sort them."
+    },
     tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Express", "PostgreSQL"],
     imageUrl: rickandmortyImg,
     url: "https://raw.githubusercontent.com/BenjaMura/Rick_and_Morty/main/Client/src/img/RickAndMortyDemo.mp4",
   },
   {
     title: "Countries",
-    description:
-      "Aplicación web donde aplico las tecnologías vistas en el bootcamp, poniendo en práctica recursos básicos de estilo y diseño, afirmando y conectando los conceptos aprendidos, probando mejores prácticas, usando y practicando el flujo de trabajo GIT y testeos.",
+    description: {
+      es: "Aplicación web donde aplico las tecnologías vistas en el bootcamp, poniendo en práctica recursos básicos de estilo y diseño, afirmando y conectando los conceptos aprendidos, probando mejores prácticas, usando y practicando el flujo de trabajo GIT y testeos.",
+      en: "Web application where I apply the technologies seen in the bootcamp, putting into practice basic style and design resources, affirming and connecting the concepts learned, testing best practices, using and practicing the GIT workflow and testing."
+    },
     tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Vite",  "Express", "PostgreSQL", "Jest"],
     imageUrl: countriesImg,
     url: "https://vimeo.com/871597606",
   },
   {
     title: "Black Group Design",
-    description:
-      "Aplicación web utilizando tecnologías: Javascript, HTML, CSS, React, Redux, Vite, Node, Express y Sequelize. Implementación de recursos de estilismo y diseño (UX:UI), almacenamiento local y en la nube, notificaciones por correo electrónico, pasarela de pago, protección y recuperación de contraseñas, autenticación de terceros, persistencia de datos, eliminación lógica, panel de administrador.",
-    tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Vite",  "Express", "PostgreSQL", "JWT", "Bcrypt", "Bootstrap", "Styled-Components", "Chart.js", "Handsontable", "MercadoPago", "Multer-Storage-Cloudinary", "Nodemailer", "Passport-Google-Oauth20"],
-    imageUrl: blackgroupdesignImg,
-    url: "https://vimeo.com/886944581",
-  }
-] as const;
-
-export const projectsData_en = [
-  {
-    title: "Rick and Morty",
-    description:
-      "This project consisted of building a web application from the API (https://rickandmortyapi.com/) in which you can search for characters, view character information, add them to favorites, filter and sort them.",
-    tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Express", "PostgreSQL"],
-    imageUrl: rickandmortyImg,
-    url: "https://raw.githubusercontent.com/BenjaMura/Rick_and_Morty/main/Client/src/img/RickAndMortyDemo.mp4",
-  },
-  {
-    title: "Countries",
-    description:
-      "Web application where I apply the technologies seen in the bootcamp, putting into practice basic style and design resources, affirming and connecting the concepts learned, testing best practices, using and practicing the GIT workflow and testing.",
-    tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Vite",  "Express", "PostgreSQL", "Jest"],
-    imageUrl: countriesImg,
-    url: "https://vimeo.com/871597606",
-  },
-  {
-    title: "Black Group Design",
-    description:
-      "Web application using technologies: Javascript, HTML, CSS, React, Redux, Vite, Node, Express and Sequelize. Implementing styling and design resources (UX:UI), local and cloud storage, email notifications, payment gateway, password protection and recovery, third party authentication, data persistence, logical deletion, administrator panel.",
+    description: {
+      es: "Aplicación web utilizando tecnologías: Javascript, HTML, CSS, React, Redux, Vite, Node, Express y Sequelize. Implementación de recursos de estilismo y diseño (UX:UI), almacenamiento local y en la nube, notificaciones por correo electrónico, pasarela de pago, protección y recuperación de contraseñas, autenticación de terceros, persistencia de datos, eliminación lógica, panel de administrador.",
+      en: "Web application using technologies: Javascript, HTML, CSS, React, Redux, Vite, Node, Express and Sequelize. Implementing styling and design resources (UX:UI), local and cloud storage, email notifications, payment gateway, password protection and recovery, third party authentication, data persistence, logical deletion, administrator panel."
+    },
     tags: ["Javascript", "Node.js", "HTML", "CSS", "React", "Redux", "Vite",  "Express", "PostgreSQL", "JWT", "Bcrypt", "Bootstrap", "Styled-Components", "Chart.js", "Handsontable", "MercadoPago", "Multer-Storage-Cloudinary", "Nodemailer", "Passport-Google-Oauth20"],
     imageUrl: blackgroupdesignImg,
     url: "https://vimeo.com/886944581",
