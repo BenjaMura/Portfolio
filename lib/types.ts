@@ -1,3 +1,5 @@
-import { links } from "./data";
+import { links_es, links_en } from "./data";
 
-export type SectionName = (typeof links)[number]["name"];
+const currentLanguage = "es";
+
+export type SectionName = typeof currentLanguage extends "es" ? typeof links_es[number]["name"] : typeof links_en[number]["name"];
