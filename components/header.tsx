@@ -7,6 +7,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useTranslation } from "react-i18next";
+import { SectionName } from "@/lib/types";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -40,7 +41,8 @@ export default function Header() {
                 )}
                 href={link.hash}
                 onClick={() => {
-                  setActiveSection(link.name);
+                  const sectionName = link.name as SectionName;
+                  setActiveSection(sectionName);
                   setTimeOfLastClick(Date.now());
                 }}
               >
