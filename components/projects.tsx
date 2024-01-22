@@ -9,10 +9,10 @@ import { useTranslation } from "react-i18next";
 
 export default function Projects() {
   const { t } = useTranslation();
-  const { ref } = useSectionInView("Proyectos", 0.5);
+  const { ref } = useSectionInView(t("header3"), 0.5);
 
   return (
-    <section id="proyectos" ref={ref} className="scroll-mt-28 mb-10">
+    <section id={t("header3.1")} ref={ref} className="scroll-mt-28 mb-10">
       <SectionHeading>{t("projects1")}</SectionHeading>
       <div>
         {projectsData.map((project, index) => (

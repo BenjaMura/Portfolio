@@ -5,6 +5,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useSectionInView } from "@/lib/hooks";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -16,9 +17,9 @@ export default function Project({
   url
 }: ProjectProps) {
   const { t } = useTranslation();
-  const ref = useRef<HTMLDivElement>(null);
+  const { ref } = useSectionInView(t("header3"));
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: useRef<HTMLDivElement>(null),
     offset: ["0 1", "1.33 1"],
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);

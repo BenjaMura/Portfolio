@@ -8,19 +8,21 @@ import Link from "next/link";
 import { BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useTranslation } from "react-i18next";
+import { SectionName } from "@/lib/types";
 
 export default function Intro() {
   const { t } = useTranslation();
-  const { ref } = useSectionInView("Inicio", 0.5);
+  const { ref } = useSectionInView(t("header1"), 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
       ref={ref}
-      id="inicio"
+      id={t("header1.1")}
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="flex items-center justify-center">
@@ -66,10 +68,10 @@ export default function Intro() {
         }}
       >
         <Link
-          href="#contacto"
+          href={t("header5.2")}
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition borderBlack dark:bg-zinc-600 dark:text-amber-200"
           onClick={() => {
-            setActiveSection("Contacto");
+            setActiveSection(t("header5") as SectionName);
             setTimeOfLastClick(Date.now());
           }}
         >
@@ -110,6 +112,13 @@ export default function Intro() {
           target="_blank"
         >
           <FaGithubSquare />
+        </a>
+        <a
+          className="bg-white p-4 text-zinc-700 hover:text-amber-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:bg-amber-50 hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
+          href="https://wa.me/5493815182901"
+          target="_blank"
+        >
+          <FaWhatsappSquare />
         </a>
       </motion.div>
     </section>

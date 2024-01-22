@@ -2,16 +2,18 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { links } from "@/lib/data";
+import { links_es, links_en } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useTranslation } from "react-i18next";
+import { SectionName } from "@/lib/types";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
   const { t } = useTranslation();
+  const flag = t("links") === "links_es" ? links_es : links_en;
 
   return (
     <header className="z-[999] relative">
@@ -22,7 +24,7 @@ export default function Header() {
       ></motion.div>
       <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
         <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-amber-700 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {links.map((link) => (
+          {flag.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative"
               key={link.hash}
@@ -39,7 +41,7 @@ export default function Header() {
                 )}
                 href={link.hash}
                 onClick={() => {
-                  setActiveSection(link.name);
+                  setActiveSection(link.name as SectionName);
                   setTimeOfLastClick(Date.now());
                 }}
               >

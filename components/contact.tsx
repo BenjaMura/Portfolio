@@ -11,11 +11,11 @@ import { useTranslation } from "react-i18next";
 
 export default function Contact() {
   const { t } = useTranslation();
-  const { ref } = useSectionInView("Contacto");
+  const { ref } = useSectionInView(t("header5"));
 
   return (
     <motion.section
-      id="contacto"
+      id={t("header5.1")}
       ref={ref}
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
       initial={{

@@ -24,11 +24,11 @@ const fadeInAnimationVariants = {
 
 export default function Skills() {
   const { t } = useTranslation();
-  const { ref } = useSectionInView("Tecnologías");
+  const { ref } = useSectionInView(t("header4"));
 
   return (
     <section
-      id="tecnologías"
+      id={t("header4.1")}
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-10"
     >
