@@ -6,7 +6,7 @@ import countriesImg from "@/public/Countries.png";
 import blackgroupdesignImg from "@/public/BlackGroupDesign.png"
 import { techsImgs } from "@/public/techs/indexTechs";
 
-export const links_es = [
+export const links = [
   {
     name: "Inicio",
     hash: "#inicio",
@@ -33,32 +33,32 @@ export const links_es = [
   },
 ] as const;
 
-export const links_en = [
-  {
-    name: "Intro",
-    hash: "#intro",
-  },
-  {
-    name: "About",
-    hash: "#about",
-  },
-  {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
-    name: "Skills",
-    hash: "#skills",
-  },
-  /* {
-    name: "Experience",
-    hash: "#experience",
-  }, */
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
-] as const;
+// export const links_en = [
+//   {
+//     name: "Intro",
+//     hash: "#intro",
+//   },
+//   {
+//     name: "About",
+//     hash: "#about",
+//   },
+//   {
+//     name: "Projects",
+//     hash: "#projects",
+//   },
+//   {
+//     name: "Skills",
+//     hash: "#skills",
+//   },
+//   /* {
+//     name: "Experience",
+//     hash: "#experience",
+//   }, */
+//   {
+//     name: "Contact",
+//     hash: "#contact",
+//   },
+// ] as const;
 
 export const experiencesData = [
   {

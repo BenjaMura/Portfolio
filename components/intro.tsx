@@ -11,17 +11,16 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useTranslation } from "react-i18next";
-import { SectionName } from "@/lib/types";
 
 export default function Intro() {
   const { t } = useTranslation();
-  const { ref } = useSectionInView(t("header1"), 0.5);
+  const { ref } = useSectionInView("Inicio", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
       ref={ref}
-      id={t("header1.1")}
+      id="inicio"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="flex items-center justify-center">
@@ -67,11 +66,10 @@ export default function Intro() {
         }}
       >
         <Link
-          href={t("header5.2")}
+          href="#contacto"
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition borderBlack dark:bg-zinc-600 dark:text-amber-200"
           onClick={() => {
-            const sectionName = t("header5") as SectionName;
-            setActiveSection(sectionName);
+            setActiveSection("Contacto");
             setTimeOfLastClick(Date.now());
           }}
         >

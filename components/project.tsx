@@ -32,7 +32,6 @@ export default function Project({
         opacity: opacityProgess,
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
-      id={t("header3.1")}
     >
       <section className="bg-amber-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-amber-200 transition sm:group-even:pl-8 dark:text-amber-200 dark:bg-zinc-700 dark:hover:bg-zinc-600">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">

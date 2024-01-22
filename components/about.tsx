@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 export default function About() {
   const { t } = useTranslation();
-  const { ref } = useSectionInView(t("header2"));
+  const { ref } = useSectionInView("Acerca");
 
   return (
     <motion.section
@@ -17,7 +17,7 @@ export default function About() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      id={t("header2.1")}
+      id="acerca"
     >
       <SectionHeading>{t("about1")}</SectionHeading>
       <p>👨‍💻 {t("about2")}</p>
