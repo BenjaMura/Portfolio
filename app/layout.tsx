@@ -30,8 +30,8 @@ export default function RootLayout({
         <div className="bg-[#f3ca4c] absolute top-[-6rem] left-1/2 transform translate-x-[-50%] -z-10 h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#f3ca4c]"></div>
 
         <ThemeContextProvider>
-          <LanguageContextProvider>
-            <ActiveSectionContextProvider>
+          <ActiveSectionContextProvider>
+            <LanguageContextProvider>
               <Header />
               {children}
               <Footer />
@@ -39,8 +39,8 @@ export default function RootLayout({
               <UpToHome />
               <LanguageSwitch />
               <ThemeSwitch />
-            </ActiveSectionContextProvider>
-          </LanguageContextProvider>
+            </LanguageContextProvider>
+          </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
     </html>
