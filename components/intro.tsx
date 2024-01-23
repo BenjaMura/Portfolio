@@ -52,7 +52,7 @@ export default function Intro() {
         <span className="flex items-center justify-center">
           <Image src={waveImage} alt="Wave" width={40} height={40} />
         </span>
-        <span className="font-bold">Soy Benjamín.</span>
+        <span className="font-bold">Mi nombre es Benjamín. </span>
         Soy desarrollador web fullstack. Disfruto construyendo sitios web.
       </motion.h1>
 
