@@ -1,12 +1,27 @@
 "use client";
 
-import { useRef } from "react";
+// import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
 type ProjectProps = (typeof projectsData)[number];
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    x: -100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.5 * index,
+      duration: 3,
+    },
+  }),
+};
 
 export default function Project({
   title,
@@ -16,21 +31,24 @@ export default function Project({
   url,
 }: ProjectProps) {
   const { ref } = useSectionInView("Proyectos");
-  const { scrollYProgress } = useScroll({
-    target: useRef<HTMLDivElement>(null),
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  // const { scrollYProgress } = useScroll({
+  //   target: useRef<HTMLDivElement>(null),
+  //   offset: ["0 1", "1.33 1"],
+  // });
+  // const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  // const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
     <motion.div
       ref={ref}
-      style={{
-        scale: scaleProgress,
-        opacity: opacityProgress,
-      }}
+      // style={{
+      //   scale: scaleProgress,
+      //   opacity: opacityProgress,
+      // }}
       className="group mb-3 sm:mb-8 last:mb-0"
+      variants={fadeInAnimationVariants}
+      initial="initial"
+      whileInView="animate"
     >
       <section className="bg-amber-100 max-w-[60rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-amber-200 transition sm:group-even:pl-8 dark:text-amber-200 dark:bg-zinc-700 dark:hover:bg-zinc-600">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-12 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[25rem]">
