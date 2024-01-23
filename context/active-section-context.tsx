@@ -2,7 +2,6 @@
 
 import type { SectionName } from "@/lib/types";
 import React, { useState, createContext, useContext } from "react";
-import { useTranslation } from "react-i18next";
 
 type ActiveSectionContextProviderProps = {
   children: React.ReactNode;
@@ -21,8 +20,7 @@ export const ActiveSectionContext =
 export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
-  const { t } = useTranslation();
-  const [activeSection, setActiveSection] = useState<SectionName>(t("header1") as SectionName);
+  const [activeSection, setActiveSection] = useState<SectionName>("Inicio");
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
   return (

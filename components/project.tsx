@@ -17,7 +17,7 @@ export default function Project({
   url
 }: ProjectProps) {
   const { t } = useTranslation();
-  const { ref } = useSectionInView(t("header3"));
+  const { ref } = useSectionInView("Proyectos");
   const { scrollYProgress } = useScroll({
     target: useRef<HTMLDivElement>(null),
     offset: ["0 1", "1.33 1"],
