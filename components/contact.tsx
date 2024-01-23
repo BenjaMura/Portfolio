@@ -7,10 +7,8 @@ import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
 import toast from "react-hot-toast";
-import { useTranslation } from "react-i18next";
 
 export default function Contact() {
-  const { t } = useTranslation();
   const { ref } = useSectionInView("Contacto");
 
   return (
@@ -31,14 +29,14 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading>{t('contact1')}</SectionHeading>
+      <SectionHeading>Contáctame</SectionHeading>
 
       <p className="text-amber-700 -mt-6 dark:text-amber-50">
-      {t('contact2')}{" "}
+      Por favor contáctame directamente a{" "}
         <a className="underline" href="mailto:benjaminmuratore1@gmail.com">
           benjaminmuratore1@gmail.com
         </a>{" "}
-        {t('contact3')}
+        o a través de este formulario.
       </p>
 
       <form
@@ -51,7 +49,7 @@ export default function Contact() {
             return;
           }
 
-          toast.success("Email sent successfully!");
+          toast.success("Mensaje enviado con éxito!");
         }}
       >
         <input
@@ -60,12 +58,12 @@ export default function Contact() {
           type="email"
           required
           maxLength={500}
-          placeholder={t('contact4')}
+          placeholder="Tu correo electrónico"
         />
         <textarea
           className="h-40 my-3 text-amber-800 rounded-lg borderBlack p-4 dark:bg-amber-50 dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none placeholder:text-zinc-500"
           name="message"
-          placeholder={t('contact5')}
+          placeholder="Tu mensaje"
           required
           maxLength={5000}
         />

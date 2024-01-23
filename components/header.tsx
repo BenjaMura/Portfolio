@@ -2,19 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-// import { links_es, links_en } from "@/lib/data";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
-// import { useTranslation } from "react-i18next";
-// import { SectionName } from "@/lib/types";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
-  // const { t } = useTranslation();
-  // const flag = t("links") === "links_es" ? links_es : links_en;
 
   return (
     <header className="z-[999] relative">

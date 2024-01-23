@@ -5,15 +5,13 @@ import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
-import { useTranslation } from "react-i18next";
 
 export default function Projects() {
-  const { t } = useTranslation();
   const { ref } = useSectionInView("Proyectos", 0.5);
 
   return (
     <section id="proyectos" ref={ref} className="scroll-mt-28 mb-10">
-      <SectionHeading>{t("projects1")}</SectionHeading>
+      <SectionHeading>Mis proyectos</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>

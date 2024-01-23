@@ -11,10 +11,8 @@ import { FaGithubSquare } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { useTranslation } from "react-i18next";
 
 export default function Intro() {
-  const { t } = useTranslation();
   const { ref } = useSectionInView("Inicio", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
@@ -54,8 +52,8 @@ export default function Intro() {
         <span className="flex items-center justify-center">
           <Image src={waveImage} alt="Wave" width={40} height={40} />
         </span>
-        <span className="font-bold">{t("intro1")}</span>
-        {t("intro2")}
+        <span className="font-bold">Soy Benjamín.</span>
+        Soy desarrollador web fullstack. Disfruto construyendo sitios web.
       </motion.h1>
 
       <motion.div
@@ -74,10 +72,18 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          {t("intro3")}
+          Contáctame aquí
         </Link>
 
-        {t("intro4") === "Descarga mi CV" ? (
+        <a
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
+          href="/CV-Muratore-Benjamin-LAT.pdf"
+          download
+        >
+          Descarga mi CV{" "}
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+        </a>
+        {/* {t("intro4") === "Descarga mi CV" ? (
           <a
             className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
             href="/CV-Muratore-Benjamín-LAT.pdf"
@@ -95,7 +101,7 @@ export default function Intro() {
             {t("intro4")}{" "}
             <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
           </a>
-        )}
+        )} */}
 
         <a
           className="bg-white p-4 text-zinc-700 hover:text-amber-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:bg-amber-50 hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
