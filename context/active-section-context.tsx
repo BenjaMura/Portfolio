@@ -22,7 +22,7 @@ export default function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
   const { t } = useTranslation();
-  const [activeSection, setActiveSection] = useState<SectionName>(t("header1") as SectionName);
+  const [activeSection, setActiveSection] = useState<SectionName>("Inicio");
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
   return (
