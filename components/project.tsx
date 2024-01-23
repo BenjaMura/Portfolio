@@ -32,8 +32,8 @@ export default function Project({
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section className="bg-amber-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-amber-200 transition sm:group-even:pl-8 dark:text-amber-200 dark:bg-zinc-700 dark:hover:bg-zinc-600">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+      <section className="bg-amber-100 max-w-[60rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative hover:bg-amber-200 transition sm:group-even:pl-8 dark:text-amber-200 dark:bg-zinc-700 dark:hover:bg-zinc-600">
+        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-12 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[25rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <a
             className="bg-white hover:bg-amber-500 hover:text-amber-900 mt-1 max-w-[8rem] px-5 py-2 flex text-center rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-400 dark:text-amber-900 dark:hover:text-amber-500 dark:hover:bg-zinc-700 active:scale-105"
@@ -65,7 +65,7 @@ export default function Project({
           src={imageUrl}
           alt="Project I worked on"
           quality={95}
-          className="absolute hidden translate-y-[15%] sm:block top-8 -right-40 w-[28rem] h-[20rem] rounded-t-lg shadow-2xl
+          className="absolute hidden translate-y-[15%] sm:block top-8 -right-40 w-[28rem] sm:w-[34rem] h-[25rem] rounded-t-lg shadow-2xl
             transition duration-300 ease-in-out
             group-hover:scale-105
             group-hover:translate-x-3
