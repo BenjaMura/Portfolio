@@ -18,7 +18,8 @@ const fadeInAnimationVariants = {
     x: 0,
     transition: {
       delay: 0.5 * index,
-      duration: 3,
+      duration: 2,
+      ease: "easeOut"
     },
   }),
 };
