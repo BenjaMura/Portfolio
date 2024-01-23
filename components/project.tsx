@@ -13,22 +13,22 @@ export default function Project({
   description,
   tags,
   imageUrl,
-  url
+  url,
 }: ProjectProps) {
-  const ref = useRef<HTMLDivElement>(null);
+  const { ref } = useSectionInView("Proyectos");
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: useRef<HTMLDivElement>(null),
     offset: ["0 1", "1.33 1"],
   });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
     <motion.div
       ref={ref}
       style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
+        scale: scaleProgress,
+        opacity: opacityProgress,
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
@@ -36,13 +36,15 @@ export default function Project({
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <a
-          className="bg-white hover:bg-amber-500 hover:text-amber-900 mt-1 max-w-[8rem] px-5 py-2 flex text-center rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-400 dark:text-amber-900 dark:hover:text-amber-500 dark:hover:bg-zinc-700 active:scale-105"
-          href={url}
-          target="_blank"
-        > Ver demo
-        </a>
+            className="bg-white hover:bg-amber-500 hover:text-amber-900 mt-1 max-w-[8rem] px-5 py-2 flex text-center rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-400 dark:text-amber-900 dark:hover:text-amber-500 dark:hover:bg-zinc-700 active:scale-105"
+            href={url}
+            target="_blank"
+          >
+            {" "}
+            Ver demo
+          </a>
           <p className="mt-2 mb-2 leading-relaxed text-amber-700 dark:text-amber-100">
-          {description.es}
+            {description.es}
           </p>
           {/* <p className="mt-2 mb-2 leading-relaxed text-amber-700 dark:text-amber-100">
           {t('project1') === "Ver demo" ? description.es : description.en}
@@ -64,15 +66,15 @@ export default function Project({
           alt="Project I worked on"
           quality={95}
           className="absolute hidden translate-y-[15%] sm:block top-8 -right-40 w-[28rem] h-[20rem] rounded-t-lg shadow-2xl
-        transition 
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:-rotate-2
+            transition duration-300 ease-in-out
+            group-hover:scale-105
+            group-hover:translate-x-3
+            group-hover:rotate-2
 
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:rotate-2
+            group-even:translate-x-3
+            group-even:rotate-2
 
-        group-even:right-[initial] group-even:-left-40"
+            group-even:right-[initial] group-even:-left-40"
         />
       </section>
     </motion.div>
