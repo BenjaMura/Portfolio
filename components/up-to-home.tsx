@@ -13,10 +13,11 @@ export default function UpToHome() {
 
   return (
     <Link
-      href="#inicio"
+      href={t("header1.2")}
       className="fixed bottom-5 left-5 bg-amber-200 w-[3rem] h-[3rem] backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-white dark:bg-opacity-50"
-      onClick={() => {
-        setActiveSection("Inicio");
+      onClick={(event) => {
+        event.preventDefault();
+        setActiveSection(t("header1") as SectionName);
         setTimeOfLastClick(Date.now());
       }}
     >

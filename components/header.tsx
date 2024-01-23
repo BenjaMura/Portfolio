@@ -40,7 +40,8 @@ export default function Header() {
                   }
                 )}
                 href={link.hash}
-                onClick={() => {
+                onClick={(event) => {
+                  event.preventDefault();
                   setActiveSection(link.name as SectionName);
                   setTimeOfLastClick(Date.now());
                 }}

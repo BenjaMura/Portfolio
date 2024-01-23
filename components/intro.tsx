@@ -70,7 +70,8 @@ export default function Intro() {
         <Link
           href={t("header5.2")}
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition borderBlack dark:bg-zinc-600 dark:text-amber-200"
-          onClick={() => {
+          onClick={(event) => {
+            event.preventDefault();
             setActiveSection(t("header5") as SectionName);
             setTimeOfLastClick(Date.now());
           }}
