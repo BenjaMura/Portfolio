@@ -8,6 +8,7 @@ import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import UpToHome from "@/components/up-to-home";
 import LanguageContextProvider from "@/context/language-context";
+import LanguageSwitch from "@/components/language-switch";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
               <Toaster position="top-right" />
               <UpToHome />
               <ThemeSwitch />
+              <LanguageSwitch />
             </ActiveSectionContextProvider>
           </LanguageContextProvider>
         </ThemeContextProvider>
