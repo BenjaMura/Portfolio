@@ -5,6 +5,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import { useTranslation } from "react-i18next";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -31,6 +32,7 @@ export default function Project({
   imageUrl,
   url,
 }: ProjectProps) {
+  const { t } = useTranslation();
   const { ref } = useSectionInView("Proyectos");
   // const { scrollYProgress } = useScroll({
   //   target: useRef<HTMLDivElement>(null),
@@ -60,14 +62,11 @@ export default function Project({
             target="_blank"
           >
             {" "}
-            Ver demo
+            {t("project1")}
           </a>
           <p className="mt-2 mb-2 leading-relaxed text-amber-700 dark:text-amber-100">
-            {description.es}
-          </p>
-          {/* <p className="mt-2 mb-2 leading-relaxed text-amber-700 dark:text-amber-100">
           {t('project1') === "Ver demo" ? description.es : description.en}
-          </p> */}
+          </p>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li

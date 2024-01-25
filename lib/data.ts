@@ -6,61 +6,6 @@ import countriesImg from "@/public/Countries.png";
 import blackgroupdesignImg from "@/public/BlackGroupDesign.png";
 import { techsImgs } from "@/public/techs/indexTechs";
 
-// export const links = {
-//   es: [
-//     {
-//       name: "Inicio",
-//       hash: "#inicio",
-//     },
-//     {
-//       name: "Acerca",
-//       hash: "#acerca",
-//     },
-//     {
-//       name: "Proyectos",
-//       hash: "#proyectos",
-//     },
-//     {
-//       name: "Tecnologías",
-//       hash: "#tecnologías",
-//     },
-//     /* {
-//     name: "Experience",
-//     hash: "#experience",
-//   }, */
-//     {
-//       name: "Contacto",
-//       hash: "#contacto",
-//     },
-//   ],
-//   en: [
-//     {
-//       name: "Intro",
-//       hash: "#intro",
-//     },
-//     {
-//       name: "About",
-//       hash: "#about",
-//     },
-//     {
-//       name: "Projects",
-//       hash: "#projects",
-//     },
-//     {
-//       name: "Skills",
-//       hash: "#skills",
-//     },
-//     /* {
-//     name: "Experience",
-//     hash: "#experience",
-//   }, */
-//     {
-//       name: "Contact",
-//       hash: "#contact",
-//     },
-//   ],
-// } as const;
-
 export const links = [
   {
     name: "Inicio",
@@ -87,60 +32,6 @@ export const links = [
     hash: "#contacto",
   },
 ] as const;
-
-// export const links_es = [
-//   {
-//     name: "Inicio",
-//     hash: "#inicio",
-//   },
-//   {
-//     name: "Acerca",
-//     hash: "#acerca",
-//   },
-//   {
-//     name: "Proyectos",
-//     hash: "#proyectos",
-//   },
-//   {
-//     name: "Tecnologías",
-//     hash: "#tecnologías",
-//   },
-//   /* {
-//     name: "Experience",
-//     hash: "#experience",
-//   }, */
-//   {
-//     name: "Contacto",
-//     hash: "#contacto",
-//   },
-// ] as const;
-
-// export const links_en = [
-//   {
-//     name: "Intro",
-//     hash: "#intro",
-//   },
-//   {
-//     name: "About",
-//     hash: "#about",
-//   },
-//   {
-//     name: "Projects",
-//     hash: "#projects",
-//   },
-//   {
-//     name: "Skills",
-//     hash: "#skills",
-//   },
-//   /* {
-//     name: "Experience",
-//     hash: "#experience",
-//   }, */
-//   {
-//     name: "Contact",
-//     hash: "#contact",
-//   },
-// ] as const;
 
 export const experiencesData = [
   {

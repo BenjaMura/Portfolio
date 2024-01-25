@@ -2,14 +2,111 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  const { t } = useTranslation();
+
+  const links_es = [
+    {
+      name: "Inicio",
+      hash: "#inicio",
+    },
+    {
+      name: "Acerca",
+      hash: "#acerca",
+    },
+    {
+      name: "Proyectos",
+      hash: "#proyectos",
+    },
+    {
+      name: "Tecnologías",
+      hash: "#tecnologías",
+    },
+    /* {
+      name: "Experience",
+      hash: "#experience",
+    }, */
+    {
+      name: "Contacto",
+      hash: "#contacto",
+    },
+  ];
+
+  const links_en = [
+    {
+      name: "Intro",
+      hash: "#intro",
+    },
+    {
+      name: "About",
+      hash: "#about",
+    },
+    {
+      name: "Projects",
+      hash: "#projects",
+    },
+    {
+      name: "Skills",
+      hash: "#skills",
+    },
+    /* {
+      name: "Experience",
+      hash: "#experience",
+    }, */
+    {
+      name: "Contact",
+      hash: "#contact",
+    },
+  ];
+
+  const flag = t("links") === "links_es" ? links_es : links_en;
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+
+  function getKeyForLink(linkHash: string) {
+    if (linkHash === "#intro" || linkHash === "#inicio") {
+      return "#inicio";
+    }
+    if (linkHash === "#about" || linkHash === "#acerca") {
+      return "#acerca";
+    }
+    if (linkHash === "#projects" || linkHash === "#proyectos") {
+      return "#proyectos";
+    }
+    if (linkHash === "#skills" || linkHash === "#tecnologías") {
+      return "#tecnologías";
+    }
+    if (linkHash === "#contact" || linkHash === "#contacto") {
+      return "#contacto";
+    } else {
+      return "#inicio";
+    }
+  }
+
+  function getNameForLink(linkName: string) {
+    if (linkName === "Intro" || linkName === "Inicio") {
+      return "Inicio";
+    }
+    if (linkName === "About" || linkName === "Acerca") {
+      return "Acerca";
+    }
+    if (linkName === "Projects" || linkName === "Proyectos") {
+      return "Proyectos";
+    }
+    if (linkName === "Skills" || linkName === "Tecnologías") {
+      return "Tecnologías";
+    }
+    if (linkName === "Contact" || linkName === "Contacto") {
+      return "Contacto";
+    } else {
+      return "Inicio";
+    }
+  }
 
   return (
     <header className="z-[999] relative">
@@ -20,10 +117,10 @@ export default function Header() {
       ></motion.div>
       <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
         <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-amber-700 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {links.map((link) => (
+          {flag.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative"
-              key={link.hash}
+              key={getKeyForLink(link.hash)}
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
@@ -32,18 +129,30 @@ export default function Header() {
                   "flex w-full items-center justify-center px-3 py-3 hover:text-amber-950 transition dark:text-amber-50 dark:hover:text-amber-200",
                   {
                     "text-amber-950 dark:text-amber-300":
-                      activeSection === link.name,
+                    link.name==="Intro" || link.name==="Inicio" ? activeSection === "Inicio":
+                    link.name==="About" || link.name==="Acerca" ? activeSection === "Acerca":
+                    link.name==="Projects" || link.name==="Proyectos" ? activeSection === "Proyectos":
+                    link.name==="Skills" || link.name==="Tecnologías" ? activeSection === "Tecnologías":
+                    // link.name==="Experience" || link.name==="Experiencia" && activeSection === "Experiencia",
+                    link.name==="Contact" || link.name==="Contacto" ? activeSection === "Contacto":
+                    activeSection === link.name,
                   }
                 )}
-                href={link.hash}
+                href={getKeyForLink(link.hash)}
                 onClick={() => {
-                  setActiveSection(link.name);
+                  link.name==="Intro" || link.name==="Inicio" ? setActiveSection("Inicio"):
+                  link.name==="About" || link.name==="Acerca" ? setActiveSection("Acerca"):
+                  link.name==="Projects" || link.name==="Proyectos" ? setActiveSection("Proyectos"):
+                  link.name==="Skills" || link.name==="Tecnologías" ? setActiveSection("Tecnologías"):
+                  // link.name==="Experience" || link.name==="Experiencia" ? setActiveSection("Experiencia"):
+                  setActiveSection("Contacto");
+                  // setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
               >
                 {link.name}
 
-                {link.name === activeSection && (
+                {getNameForLink(link.name) === activeSection && (
                   <motion.span
                     className="bg-amber-300 rounded-full absolute inset-0 -z-10 dark:bg-zinc-700"
                     layoutId="activeSection"

@@ -6,6 +6,7 @@ import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -22,6 +23,7 @@ const fadeInAnimationVariants = {
 };
 
 export default function Skills() {
+  const { t } = useTranslation();
   const { ref } = useSectionInView("Tecnologías");
 
   return (
@@ -30,7 +32,7 @@ export default function Skills() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-10"
     >
-      <SectionHeading>Mis habilidades técnicas</SectionHeading>
+      <SectionHeading>{t("skills1")}</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-amber-800">
         {skillsData.map((skill, index) => (
           <a
