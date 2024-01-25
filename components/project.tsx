@@ -57,7 +57,7 @@ export default function Project({
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-12 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[25rem]">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <a
-            className="bg-white hover:bg-amber-500 hover:text-amber-900 mt-1 max-w-[8rem] px-5 py-2 flex text-center rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-400 dark:text-amber-900 dark:hover:text-amber-500 dark:hover:bg-zinc-700 active:scale-105"
+            className="bg-white hover:bg-amber-500 hover:text-amber-900 mt-1 max-w-[8rem] px-5 py-2 flex text-center rounded-full outline-none hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-400 dark:text-amber-900 dark:hover:text-amber-500 dark:hover:bg-zinc-700 active:scale-105"
             href={url}
             target="_blank"
           >

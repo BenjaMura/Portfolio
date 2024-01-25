@@ -68,7 +68,7 @@ export default function Intro() {
       >
         <Link
           href="#contacto"
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition borderBlack dark:bg-zinc-600 dark:text-amber-200"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:bg-amber-50 hover:scale-110 active:scale-105 transition borderBlack dark:bg-zinc-600 dark:text-amber-200"
           onClick={() => {
             setActiveSection("Contacto");
             setTimeOfLastClick(Date.now());
@@ -79,7 +79,7 @@ export default function Intro() {
 
         {t("intro4") === "Descarga mi CV" ? (
           <a
-            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
+            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:bg-amber-50 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
             href="/CV-Muratore-Benjamín-LAT.pdf"
             download
           >
@@ -88,7 +88,7 @@ export default function Intro() {
           </a>
         ) : (
           <a
-            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:bg-amber-50 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
+            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none hover:bg-amber-50 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
             href="/CV-Muratore-Benjamin-ENG.pdf"
             download
           >
@@ -98,7 +98,7 @@ export default function Intro() {
         )}
 
         <a
-          className="bg-white p-4 text-zinc-700 hover:text-amber-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:bg-amber-50 hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
+          className="bg-white p-4 text-zinc-700 hover:text-amber-950 flex items-center gap-2 rounded-full hover:bg-amber-50 hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
           href="https://www.linkedin.com/in/benjaminmuratore/"
           target="_blank"
         >
@@ -106,14 +106,14 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-zinc-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:bg-amber-50 hover:scale-[1.15] hover:text-amber-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
+          className="bg-white p-4 text-zinc-700 flex items-center gap-2 text-[1.35rem] rounded-full hover:bg-amber-50 hover:scale-[1.15] hover:text-amber-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
           href="https://github.com/BenjaMura"
           target="_blank"
         >
           <FaGithubSquare />
         </a>
         <a
-          className="bg-white p-4 text-zinc-700 hover:text-amber-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:bg-amber-50 hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
+          className="bg-white p-4 text-zinc-700 hover:text-amber-950 flex items-center gap-2 rounded-full hover:bg-amber-50 hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-zinc-600 dark:text-amber-200"
           href="https://wa.me/5493815182901"
           target="_blank"
         >
